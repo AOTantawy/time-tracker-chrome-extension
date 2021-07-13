@@ -7,9 +7,11 @@ A simple chrome extension to track time
 ![extension screenshot](/screenshots/screen2.png)
 
 ## Installation process
-1) download repo and extract zip 
-2) go to [chrome://extensions/](chrome://extensions/)
-3) enable developer mode 
-4) click Load unpacked
-5) choose project folder 
-6) enjoy
+1) [Download Repo](https://github.com/AOTantawy/time-tracker-chrome-extension.git) 
+2) Extract ZIP file 
+3) Go to [chrome://extensions/](chrome://extensions/)
+4) Enable developer mode 
+5) Click Load unpacked
+6) Choose project folder 
+7) Enjoy 😎
+
