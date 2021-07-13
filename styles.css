@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 50px; 
+    width: 300px;
+}
+
+#time-counter {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#start, #pause,#reset {
+    background-color: inherit;
+    border: none;
+    margin-bottom: 5px;
+    width: 30%;
+    border-radius: 10px;
+   
+}
+
+#start:hover, #pause:hover,#reset:hover {
+    background-color: #e0e0e0;
+}
