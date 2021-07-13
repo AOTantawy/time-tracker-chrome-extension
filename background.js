@@ -1,8 +1,9 @@
 let hr = 0;
 let min = 0;
 let sec = 0;
-let interval;
-chrome.action.setBadgeText({ text: `0` });
+let interval = null;
+
+chrome.action.setBadgeText({ text: "0" });
 chrome.action.setBadgeBackgroundColor({ color: "#4688F1" });
 
 chrome.runtime.onConnect.addListener(function (port) {
@@ -18,9 +19,7 @@ chrome.runtime.onConnect.addListener(function (port) {
     } else {
       console.log("reset");
       clearInterval(interval);
-      hr = 0;
-      min = 0;
-      sec = 0;
+      hr = min = sec = 0;
       port.postMessage({ hr, min, sec });
     }
 

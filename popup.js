@@ -23,7 +23,7 @@ reset.onclick = () => {
 
 
 port.onMessage.addListener(function (msg) {
-    timeCounter.innerHTML = `${msg.hr} hr: ${msg.min} min: ${msg.sec} sec`;
+    timeCounter.innerHTML = `${msg.hr} hr : ${msg.min} min : ${msg.sec} sec`;
 });
 
 
