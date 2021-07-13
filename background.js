@@ -8,8 +8,7 @@ chrome.action.setBadgeBackgroundColor({ color: "#4688F1" });
 
 chrome.runtime.onConnect.addListener(function (port) {
   port.onMessage.addListener(function (msg) {
-    
-    if (msg.start === "start" ) {
+    if (msg.start === "start") {
       console.log("start");
       manageInterval(port);
     } else if (msg.pause === "pause") {
@@ -22,7 +21,6 @@ chrome.runtime.onConnect.addListener(function (port) {
       hr = min = sec = 0;
       port.postMessage({ hr, min, sec });
     }
-
   });
 });
 
@@ -44,11 +42,10 @@ function manageInterval(port) {
     } catch {
       console.log("disconnected port");
     }
-    updateBadge(hr,min);
+    updateBadge(hr, min);
   }, 1000);
 }
 
-
-function updateBadge(hr,min) {
-    chrome.action.setBadgeText({ text: `${hr * 60 + min}` });
+function updateBadge(hr, min) {
+  chrome.action.setBadgeText({ text: `${hr * 60 + min}` });
 }

@@ -5,25 +5,22 @@ const start = document.querySelector("#start");
 const pause = document.querySelector("#pause");
 const reset = document.querySelector("#reset");
 
-document.addEventListener("DOMContentLoaded" , () => {
-    port.postMessage({ pause: "pause" });
-})
+document.addEventListener("DOMContentLoaded", () => {
+  port.postMessage({ start: "start" });
+});
 
 start.onclick = () => {
-    port.postMessage({start:"start"});
-}
+  port.postMessage({ start: "start" });
+};
 
 pause.onclick = () => {
-  port.postMessage({ pause:"pause" });
+  port.postMessage({ pause: "pause" });
 };
 
 reset.onclick = () => {
-  port.postMessage({ reset:"reset" });
+  port.postMessage({ reset: "reset" });
 };
 
-
 port.onMessage.addListener(function (msg) {
-    timeCounter.innerHTML = `${msg.hr} hr : ${msg.min} min : ${msg.sec} sec`;
+  timeCounter.innerHTML = `${msg.hr} hr : ${msg.min} min : ${msg.sec} sec`;
 });
-
-
