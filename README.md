@@ -1,5 +1,4 @@
-# Time tracker 
-A simple chrome extension to track time 
+# Simple Time tracker - Chrome extension -
 
 ## Exension Screenshots
 ![extension screenshot](/screenshots/screen1.png)
