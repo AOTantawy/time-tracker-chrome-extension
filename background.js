@@ -19,6 +19,7 @@ chrome.runtime.onConnect.addListener(function (port) {
       console.log("reset");
       clearInterval(interval);
       hr = min = sec = 0;
+      updateBadge(hr,min);
       port.postMessage({ hr, min, sec });
     }
   });
